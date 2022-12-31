@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "625693874381",
+    "project_id": "uskt-insider",
+    "storage_bucket": "uskt-insider.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:625693874381:android:d0c842eab9644448c9f184",
+        "android_client_info": {
+          "package_name": "com.example.uskt_insider"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "625693874381-mt3pcj1uasq5lk4kn926b22379u306tg.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC48KP9g5SGslF91RqNFMTP2vz4Qufsy3Y"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "625693874381-mt3pcj1uasq5lk4kn926b22379u306tg.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

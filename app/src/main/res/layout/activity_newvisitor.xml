@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".newvisitor"
+    android:background="@drawable/newnewvisitor"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="450dp"
+        android:gravity="center"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent">
+        <EditText
+
+            android:id="@+id/fullname"
+            android:paddingLeft="20dp"
+            android:layout_width="300dp"
+            android:layout_height="35dp"
+            android:hint="Full Name"
+            android:textColor="#25597D"
+
+            android:background="@drawable/userentry"
+            android:textColorHint="@color/gray_600"
+            />
+        <EditText
+            android:id="@+id/cnic"
+            android:layout_marginTop="10dp"
+            android:paddingLeft="20dp"
+            android:layout_width="300dp"
+            android:layout_height="35dp"
+            android:hint="CNIC"
+            android:textColor="#25597D"
+            android:textColorHint="@color/gray_600"
+            android:background="@drawable/userentry"/>
+        <EditText
+            android:id="@+id/phonenumber"
+            android:layout_marginTop="10dp"
+            android:paddingLeft="20dp"
+            android:layout_width="300dp"
+            android:layout_height="35dp"
+            android:hint="Phone Number"
+            android:textColor="#25597D"
+            android:textColorHint="@color/gray_600"
+            android:background="@drawable/userentry"/>
+        <EditText
+            android:id="@+id/city"
+            android:layout_marginTop="10dp"
+            android:paddingLeft="20dp"
+            android:layout_width="300dp"
+            android:layout_height="35dp"
+            android:hint="City"
+            android:textColor="#25597D"
+            android:textColorHint="@color/gray_600"
+            android:background="@drawable/userentry"/>
+        <EditText
+            android:textColorHint="@color/gray_600"
+            android:id="@+id/refby"
+            android:layout_marginTop="10dp"
+            android:paddingLeft="20dp"
+            android:layout_width="300dp"
+            android:layout_height="35dp"
+            android:hint="Reffered By"
+            android:background="@drawable/userentry"
+            android:textColor="#25597D"/>
+        <Button
+            android:textColor="@color/white"
+            android:layout_marginTop="20dp"
+            android:id="@+id/savedata"
+            android:layout_width="300dp"
+            android:layout_height="50dp"
+            android:backgroundTint="#25597D"
+            android:text="SAVE DATA" />
+        <TextView
+            android:textColor="@color/gray_600"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Your data will be saved and only be viewed by system Admin"
+            android:textSize="10dp" />
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
