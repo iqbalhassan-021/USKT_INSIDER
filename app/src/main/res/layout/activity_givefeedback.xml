@@ -17,6 +17,7 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <EditText
+            android:textColorHint="@color/gray_600"
             android:layout_width="300dp"
             android:layout_height="35dp"
 
@@ -25,6 +26,7 @@
 
             android:paddingLeft="20dp" />
         <EditText
+            android:textColorHint="@color/gray_600"
             android:layout_width="300dp"
             android:layout_height="wrap_content"
 

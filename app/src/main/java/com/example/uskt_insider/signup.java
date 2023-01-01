@@ -22,6 +22,7 @@ public class signup extends AppCompatActivity {
     EditText username;
     EditText password;
     EditText retypepasscode;
+    EditText loginString;
     Button signup;
     FirebaseAuth authenticate;
 
@@ -36,6 +37,7 @@ public class signup extends AppCompatActivity {
         authenticate = FirebaseAuth.getInstance();
         username = (EditText) findViewById(R.id.username);
         password = (EditText) findViewById(R.id.password);
+        loginString = (EditText) findViewById(R.id.loginstring);
 
         retypepasscode = (EditText) findViewById(R.id.Retypepassword);
 
@@ -46,6 +48,7 @@ public class signup extends AppCompatActivity {
                 String userName = username.getText().toString();
                 String userPassword = password.getText().toString();
                 String userRetype = retypepasscode.getText().toString();
+                String LoginString = loginString.getText().toString();
                 if(TextUtils.isEmpty(userName)){
                     username.setError("Username cannot be empty");
                     username.requestFocus();
@@ -53,6 +56,10 @@ public class signup extends AppCompatActivity {
                 if(TextUtils.isEmpty(userPassword)){
                     password.setError("Password cannot be empty");
                     password.requestFocus();
+                }
+                if(LoginString!="uskt@47"){
+                    loginString.setError("Invalid entry!");
+                    loginString.requestFocus();
                 }
                 if(userPassword.equals(userRetype)){
                     authenticate.createUserWithEmailAndPassword(userName+"@uskt.edu.pk",userPassword).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
