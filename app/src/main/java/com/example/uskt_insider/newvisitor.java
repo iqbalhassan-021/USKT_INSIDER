@@ -19,13 +19,14 @@ public class newvisitor extends AppCompatActivity {
     EditText city;
     EditText name;
     Button saveData;
+    DatabaseReference myRef;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_newvisitor);
         getSupportActionBar().hide();
-        FirebaseDatabase adminsignup = FirebaseDatabase.getInstance("https://uskt-insider-default-rtdb.firebaseio.com/");
-        DatabaseReference myRef = adminsignup.getReference();
+
+        myRef = FirebaseDatabase.getInstance().getReference().child("visitors");
 
         cnic = (EditText) findViewById(R.id.cnic);
         pnumber = (EditText) findViewById(R.id.phonenumber);
@@ -33,19 +34,23 @@ public class newvisitor extends AppCompatActivity {
         city = (EditText) findViewById(R.id.city);
         name = (EditText) findViewById(R.id.fullname);
         saveData = (Button) findViewById(R.id.savedata);
+
         saveData.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if(cnic.getText().toString().equals("")||pnumber.getText().toString().equals("")||refby.getText().toString().equals("")||city.getText().toString().equals("")||name.getText().toString().equals("")){
+                String CNIC = cnic.getText().toString();
+                String PhoneNumber = pnumber.getText().toString();
+                String REFby = refby.getText().toString();
+                String CITY = city.getText().toString();
+                String NAME = name.getText().toString();
+                if(CNIC.equals("")||PhoneNumber.equals("")||REFby.equals("")||CITY.equals("")||NAME.equals("")){
                     Toast.makeText(newvisitor.this, "Please fill all the entries", Toast.LENGTH_SHORT).show();
 
                 }
                 else {
-                    myRef.child("visitor").child("name").setValue(name.getText().toString());
-                    myRef.child("visitor").child("number").setValue(name.getText().toString());
-                    myRef.child("visitor").child("cnic").setValue(cnic.getText().toString());
-                    myRef.child("visitor").child("city").setValue(city.getText().toString());
-                    myRef.child("visitor").child("referedby").setValue(refby.getText().toString());
+                    VisitorClass addnewVisitor = new VisitorClass(NAME,CNIC,PhoneNumber,REFby,CITY);
+                    myRef.push().setValue(addnewVisitor);
+                    Toast.makeText(newvisitor.this, "Data saved successfully", Toast.LENGTH_SHORT).show();
                     Intent visitorPage = new Intent(newvisitor.this,visitorpage.class);
                     startActivity(visitorPage);
                 }

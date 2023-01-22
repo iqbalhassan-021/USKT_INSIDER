@@ -18,6 +18,7 @@
         tools:layout_editor_absoluteX="0dp">
 
         <EditText
+            android:textColor="@color/black"
             android:textColorHint="@color/gray_600"
             android:id="@+id/username"
             android:layout_width="300dp"
@@ -27,6 +28,7 @@
             android:paddingLeft="20dp" />
 
         <EditText
+            android:textColor="@color/black"
             android:textColorHint="@color/gray_600"
             android:id="@+id/password"
             android:layout_width="300dp"
@@ -38,6 +40,7 @@
             android:paddingLeft="20dp" />
 
         <EditText
+            android:textColor="@color/black"
             android:textColorHint="@color/gray_600"
             android:id="@+id/Retypepassword"
             android:layout_width="300dp"
@@ -48,6 +51,7 @@
             android:inputType="textPassword"
             android:paddingLeft="20dp" />
         <EditText
+            android:textColor="@color/black"
             android:textColorHint="@color/gray_600"
             android:id="@+id/loginstring"
             android:layout_width="300dp"

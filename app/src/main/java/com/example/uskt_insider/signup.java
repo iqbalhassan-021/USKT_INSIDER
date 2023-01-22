@@ -25,7 +25,7 @@ public class signup extends AppCompatActivity {
     EditText loginString;
     Button signup;
     FirebaseAuth authenticate;
-
+    String concatEmail = "@uskt.edu.pk";
 
 
 
@@ -49,40 +49,53 @@ public class signup extends AppCompatActivity {
                 String userPassword = password.getText().toString();
                 String userRetype = retypepasscode.getText().toString();
                 String LoginString = loginString.getText().toString();
+                if(!userName.equals(userName+"@uskt.edu.pk")){
+                    username.setError("invalid email type");
+                    username.requestFocus();
+                }
+                else{
                 if(TextUtils.isEmpty(userName)){
-                    username.setError("Username cannot be empty");
+                    username.setError("email cannot be empty");
                     username.requestFocus();
                 }
                 if(TextUtils.isEmpty(userPassword)){
                     password.setError("Password cannot be empty");
                     password.requestFocus();
                 }
-                if(LoginString!="uskt@47"){
-                    loginString.setError("Invalid entry!");
-                    loginString.requestFocus();
-                }
-                if(userPassword.equals(userRetype)){
-                    authenticate.createUserWithEmailAndPassword(userName+"@uskt.edu.pk",userPassword).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
-                        @Override
-                        public void onComplete(@NonNull Task<AuthResult> task) {
-                            if(task.isSuccessful()){
-                                Toast.makeText(signup.this, "User is registered successfully!", Toast.LENGTH_SHORT).show();
-                                startActivity(new Intent(com.example.uskt_insider.signup.this,AdminDevLogin.class));
+                if(userPassword.length()<8){
+                    password.setError("Password cannot be less then 8 characters");
+                    password.requestFocus();
+                    }
+
+
+                    if(LoginString.equals("uskt@47")&&userPassword.equals(userRetype)){
+                        authenticate.createUserWithEmailAndPassword(userName,userPassword).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
+                            @Override
+                            public void onComplete(@NonNull Task<AuthResult> task) {
+                                if(task.isSuccessful()){
+                                    Toast.makeText(signup.this, "User is registered successfully!", Toast.LENGTH_SHORT).show();
+                                    startActivity(new Intent(com.example.uskt_insider.signup.this,AdminDevLogin.class));
+                                }
+                                else{
+                                    Toast.makeText(signup.this, "User is not registered! " + task.getException().getMessage(), Toast.LENGTH_SHORT).show();
+
+                                }
                             }
-                            else{
-                                Toast.makeText(signup.this, "User is not registered! " + task.getException().getMessage(), Toast.LENGTH_SHORT).show();
+                        });
 
-                            }
-                        }
-                    });
-                }
-                else{
+                    }
+                    else{
 
-                    retypepasscode.setError("Password doesn't match!");
-                    retypepasscode.requestFocus();
-                }
+                        retypepasscode.setError("Password doesn't match!");
+                        retypepasscode.requestFocus();
+                        loginString.setError("Invalid entry!");
+                        loginString.requestFocus();
+                    }
 
 
+
+
+            }
             }
         });
 

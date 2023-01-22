@@ -21,7 +21,7 @@
             android:layout_width="300dp"
             android:layout_height="35dp"
             android:hint="Full Name"
-            android:textColor="#25597D"
+            android:textColor="@color/black"
 
             android:background="@drawable/userentry"
             android:textColorHint="@color/gray_600"
@@ -33,7 +33,7 @@
             android:layout_width="300dp"
             android:layout_height="35dp"
             android:hint="CNIC"
-            android:textColor="#25597D"
+            android:textColor="@color/black"
             android:textColorHint="@color/gray_600"
             android:background="@drawable/userentry"/>
         <EditText
@@ -43,7 +43,7 @@
             android:layout_width="300dp"
             android:layout_height="35dp"
             android:hint="Phone Number"
-            android:textColor="#25597D"
+            android:textColor="@color/black"
             android:textColorHint="@color/gray_600"
             android:background="@drawable/userentry"/>
         <EditText
@@ -53,7 +53,7 @@
             android:layout_width="300dp"
             android:layout_height="35dp"
             android:hint="City"
-            android:textColor="#25597D"
+            android:textColor="@color/black"
             android:textColorHint="@color/gray_600"
             android:background="@drawable/userentry"/>
         <EditText
@@ -65,7 +65,7 @@
             android:layout_height="35dp"
             android:hint="Reffered By"
             android:background="@drawable/userentry"
-            android:textColor="#25597D"/>
+            android:textColor="@color/black"/>
         <Button
             android:textColor="@color/white"
             android:layout_marginTop="20dp"

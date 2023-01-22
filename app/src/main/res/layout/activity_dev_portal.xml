@@ -4,47 +4,45 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".visitorpage"
-    android:background="@drawable/newvisitorhome"
-    >
+    tools:context=".adminPortal"
+    android:background="@drawable/newvisitorhome">
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="400dp"
+        android:layout_height="300dp"
         android:gravity="center"
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.7"
+        app:layout_constraintVertical_bias="0.632"
         tools:layout_editor_absoluteX="0dp">
 
         <Button
             android:layout_width="300dp"
-            android:id="@+id/loadmodelvisitor"
-            android:layout_height="50dp"
-            android:layout_gravity="center"
-            android:backgroundTint="#25597D"
-            android:text="View 3D Model"
-            android:textColor="@color/white" />
-
-        <Button
-            android:layout_width="300dp"
-            android:id="@+id/usktmapapge"
+            android:id="@+id/addremoveadmion"
             android:layout_height="50dp"
             android:layout_gravity="center"
             android:backgroundTint="@color/white"
-            android:text="USKT Map"
+            android:text="Add or Remove Admin"
             android:textColor="#25597D" />
 
         <Button
             android:layout_width="300dp"
-            android:id="@+id/feedbackpage"
+            android:id="@+id/checkrequests"
             android:layout_height="50dp"
             android:layout_gravity="center"
+
             android:backgroundTint="#25597D"
-            android:text="Give Feedback"
-
+            android:text="Check Requests"
             android:textColor="@color/white" />
-    </LinearLayout>
+        <Button
+            android:layout_width="300dp"
+            android:id="@+id/logout"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
 
+            android:backgroundTint="@color/white"
+            android:text="Logout"
+            android:textColor="#25597D" />
+    </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

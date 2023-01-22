@@ -9,7 +9,7 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="200dp"
+        android:layout_height="300dp"
         android:gravity="center"
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -19,7 +19,7 @@
 
         <Button
             android:layout_width="300dp"
-
+            android:id="@+id/viewModel"
             android:layout_height="50dp"
             android:layout_gravity="center"
             android:backgroundTint="#25597D"
@@ -28,7 +28,7 @@
 
         <Button
             android:layout_width="300dp"
-
+            android:id="@+id/seeMAP"
             android:layout_height="50dp"
             android:layout_gravity="center"
             android:backgroundTint="@color/white"
@@ -37,21 +37,38 @@
 
         <Button
             android:layout_width="300dp"
-
+            android:id="@+id/checknewVisitors"
             android:layout_height="50dp"
             android:layout_gravity="center"
             android:backgroundTint="#25597D"
-            android:text="Check Feedbacks"
+            android:text="New Visitors"
             android:textColor="@color/white" />
+        <Button
+            android:layout_width="300dp"
+            android:id="@+id/checkFeeds"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:backgroundTint="@color/white"
+            android:text="Check Feedbacks"
+            android:textColor="#25597D" />
 
         <Button
             android:layout_width="300dp"
+            android:id="@+id/sendrequests"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
 
+            android:backgroundTint="#25597D"
+            android:text="Send Request"
+            android:textColor="@color/white" />
+        <Button
+            android:layout_width="300dp"
+            android:id="@+id/logout"
             android:layout_height="50dp"
             android:layout_gravity="center"
 
             android:backgroundTint="@color/white"
-            android:text="Send Request"
+            android:text="Logout"
             android:textColor="#25597D" />
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

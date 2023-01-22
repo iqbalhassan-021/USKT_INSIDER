@@ -14,17 +14,20 @@
         app:layout_constraintBottom_toBottomOf="parent">
 
             <EditText
+                android:textColor="@color/black"
                 android:id="@+id/Username"
                 android:paddingLeft="20dp"
                 android:layout_width="300dp"
                 android:layout_height="35dp"
-                android:hint="username"
+                android:hint="USKT email"
+                android:inputType="textEmailAddress"
                 android:textColorHint="@color/gray_600"
                 android:background="@drawable/userentry"/>
 
 
 
         <EditText
+            android:textColor="@color/black"
             android:textColorHint="@color/gray_600"
             android:inputType="textPassword"
             android:layout_marginTop="10dp"
@@ -35,6 +38,7 @@
             android:id="@+id/Password"
             android:background="@drawable/userentry"/>
         <EditText
+            android:textColor="@color/black"
             android:textColorHint="@color/gray_600"
             android:id="@+id/loginstring"
             android:layout_width="300dp"
@@ -44,19 +48,17 @@
             android:hint="Login String"
             android:inputType="textPassword"
             android:paddingLeft="20dp" />
-
-        <Button
+     <!--   <Button
+            android:layout_gravity="center"
+            android:id="@+id/forgotpasswd"
             android:layout_width="wrap_content"
-            android:layout_height="30dp"
-            android:text="Forgot Password"
-            android:backgroundTint="@color/white"
+            android:layout_height="wrap_content"
             android:textColor="#25597D"
-            android:layout_marginTop="5dp"
-            android:id="@+id/forgotpassword"
-
-            android:textSize="8dp"/>
+            android:backgroundTint="@color/white"
+            android:text="Forgot password?"
+            android:layout_marginTop="5dp"/>-->
         <Button
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="0dp"
             android:id="@+id/Login"
             android:textColor="@color/white"
             android:layout_width="300dp"
