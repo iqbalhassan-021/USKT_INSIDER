@@ -15,12 +15,19 @@
         app:layout_constraintBottom_toBottomOf="parent">
 
 
-        <TextView
+        <ListView
+            android:textColor="@color/black"
+
             android:id="@+id/userlist"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:paddingLeft="10dp"
-            android:text="Data" />
+            android:text="Data"
+            >
+
+        </ListView>
+
+
 
     </LinearLayout>
 
